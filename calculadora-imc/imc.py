@@ -1,11 +1,21 @@
 print ('Vamos calcular seu IMC?')
 # Mensagem de Apresentação
 
-peso = float (input('Digite seu peso: '))
+while True:
+    try:
+        peso = float (input('Digite seu peso: '))
 # Pedir o peso
+        break # Sai do loop após número inserido corretamente
+    except ValueError:
+        print("Valor inválido! Tente novamente. Insira apenas números inteiros ou separados por ponto, exemplo: 70.5")
 
-altura = float (input('Digite sua altura: '))
+while True:
+    try: 
+        altura = float (input('Digite sua altura: '))
 # Pedir a altura
+        break #sai do loop caso inserido número correto
+    except ValueError: 
+        print("Valor inválido! Tente novamente. Insira apenas números inteiros ou separados por ponto, exemplo: 1.72")
 
 imc = (peso / (altura ** 2))
 
